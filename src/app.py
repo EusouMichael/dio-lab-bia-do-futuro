@@ -5,7 +5,7 @@ import streamlit as st
 from agente import BiaFuturo, carregar_contexto, moeda
 
 
-st.set_page_config(page_title="BIA Futuro", page_icon="BIA", layout="wide")
+st.set_page_config(page_title="BIA Futuro", page_icon=":material/savings:", layout="wide")
 
 
 def markdown_seguro(texto: str) -> str:
