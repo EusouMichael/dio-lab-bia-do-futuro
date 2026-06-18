@@ -129,3 +129,19 @@ A quarta pergunta demonstra a recusa segura do agente diante de informacao sensi
 ## Observacao
 
 Este projeto usa dados ficticios. A BIA Futuro nao realiza transacoes bancarias reais, nao substitui consultoria financeira regulada e nao promete rentabilidade.
+
+##  Demonstração
+
+Assista à demonstração completa da BIA Futuro AI:
+
+[![Demo](https://img.shields.io/badge/▶%20Ver%20Demonstração-Drive-blue)](https://drive.google.com/file/d/1Qr77tl76h7yu61TcCKDcl85mwc7q7_ic/view?usp=sharing)
+---
+
+##  Tecnologias Utilizadas
+
+- Python
+- Streamlit
+- CSV
+- JSON
+- IA baseada em regras
+- Análise Financeira
