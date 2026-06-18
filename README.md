@@ -1,149 +1,131 @@
-# 🤖 Agente Financeiro Inteligente com IA Generativa
+# BIA Futuro - Agente Financeiro Inteligente com IA Generativa
 
 ## Contexto
 
-Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots reativos para **agentes inteligentes e proativos**. Neste desafio, você vai idealizar e prototipar um agente financeiro que utiliza IA Generativa para:
+A **BIA Futuro** e um prototipo de agente financeiro generativo criado para o bootcamp Bradesco/DIO. A proposta e evoluir assistentes virtuais financeiros de chatbots reativos para agentes consultivos, capazes de analisar contexto, orientar o cliente e reduzir riscos de respostas inventadas.
 
-- **Antecipar necessidades** ao invés de apenas responder perguntas
-- **Personalizar** sugestões com base no contexto de cada cliente
-- **Cocriar soluções** financeiras de forma consultiva
-- **Garantir segurança** e confiabilidade nas respostas (anti-alucinação)
+O agente foi construido com dados mockados e foco em:
 
-> [!TIP]
-> Na pasta [`examples/`](./examples/) você encontra referências de implementação para cada etapa deste desafio.
-
----
-
-## O Que Você Deve Entregar
-
-### 1. Documentação do Agente
-
-Defina **o que** seu agente faz e **como** ele funciona:
-
-- **Caso de Uso:** Qual problema financeiro ele resolve? (ex: consultoria de investimentos, planejamento de metas, alertas de gastos)
-- **Persona e Tom de Voz:** Como o agente se comporta e se comunica?
-- **Arquitetura:** Fluxo de dados e integração com a base de conhecimento
-- **Segurança:** Como evitar alucinações e garantir respostas confiáveis?
-
-📄 **Template:** [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
+- Antecipar necessidades financeiras.
+- Personalizar respostas com base no perfil do cliente.
+- Cocriar solucoes financeiras de forma educativa.
+- Garantir seguranca e confiabilidade nas respostas.
 
 ---
+
+## O Que Foi Entregue
+
+### 1. Documentacao do Agente
+
+Define caso de uso, persona, arquitetura, seguranca e limitacoes da BIA Futuro.
+
+Arquivo: [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
 
 ### 2. Base de Conhecimento
 
-Utilize os **dados mockados** disponíveis na pasta [`data/`](./data/) para alimentar seu agente:
+Explica como os dados mockados da pasta `data/` sao usados para personalizar respostas.
 
-| Arquivo | Formato | Descrição |
-|---------|---------|-----------|
-| `transacoes.csv` | CSV | Histórico de transações do cliente |
-| `historico_atendimento.csv` | CSV | Histórico de atendimentos anteriores |
-| `perfil_investidor.json` | JSON | Perfil e preferências do cliente |
-| `produtos_financeiros.json` | JSON | Produtos e serviços disponíveis |
-
-Você pode adaptar ou expandir esses dados conforme seu caso de uso.
-
-📄 **Template:** [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
-
----
+Arquivo: [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
 
 ### 3. Prompts do Agente
 
-Documente os prompts que definem o comportamento do seu agente:
+Contem system prompt, exemplos de interacao e tratamento de casos sensiveis.
 
-- **System Prompt:** Instruções gerais de comportamento e restrições
-- **Exemplos de Interação:** Cenários de uso com entrada e saída esperada
-- **Tratamento de Edge Cases:** Como o agente lida com situações limite
+Arquivo: [`docs/03-prompts.md`](./docs/03-prompts.md)
 
-📄 **Template:** [`docs/03-prompts.md`](./docs/03-prompts.md)
+### 4. Aplicacao Funcional
 
----
+Protótipo em Streamlit com chat, perguntas rapidas e leitura da base local.
 
-### 4. Aplicação Funcional
+Arquivos principais:
 
-Desenvolva um **protótipo funcional** do seu agente:
+- [`src/app.py`](./src/app.py)
+- [`src/agente.py`](./src/agente.py)
+- [`src/requirements.txt`](./src/requirements.txt)
 
-- Chatbot interativo (sugestão: Streamlit, Gradio ou similar)
-- Integração com LLM (via API ou modelo local)
-- Conexão com a base de conhecimento
+### 5. Avaliacao e Metricas
 
-📁 **Pasta:** [`src/`](./src/)
+Define testes de assertividade, seguranca, coerencia, utilidade e tom de voz.
 
----
-
-### 5. Avaliação e Métricas
-
-Descreva como você avalia a qualidade do seu agente:
-
-**Métricas Sugeridas:**
-- Precisão/assertividade das respostas
-- Taxa de respostas seguras (sem alucinações)
-- Coerência com o perfil do cliente
-
-📄 **Template:** [`docs/04-metricas.md`](./docs/04-metricas.md)
-
----
+Arquivo: [`docs/04-metricas.md`](./docs/04-metricas.md)
 
 ### 6. Pitch
 
-Grave um **pitch de 3 minutos** (estilo elevador) apresentando:
+Roteiro de apresentacao de ate 3 minutos para demonstrar o agente.
 
-- Qual problema seu agente resolve?
-- Como ele funciona na prática?
-- Por que essa solução é inovadora?
+Arquivo: [`docs/05-pitch.md`](./docs/05-pitch.md)
 
-📄 **Template:** [`docs/05-pitch.md`](./docs/05-pitch.md)
+### 7. Ciberseguranca
 
----
+Plano inicial para protecao de dados, guardrails do agente, prompt injection, logs seguros e proximos passos com time de seguranca.
 
-## Ferramentas Sugeridas
-
-Todas as ferramentas abaixo possuem versões gratuitas:
-
-| Categoria | Ferramentas |
-|-----------|-------------|
-| **LLMs** | [ChatGPT](https://chat.openai.com/), [Copilot](https://copilot.microsoft.com/), [Gemini](https://gemini.google.com/), [Claude](https://claude.ai/), [Ollama](https://ollama.ai/) |
-| **Desenvolvimento** | [Streamlit](https://streamlit.io/), [Gradio](https://www.gradio.app/), [Google Colab](https://colab.research.google.com/) |
-| **Orquestração** | [LangChain](https://www.langchain.com/), [LangFlow](https://www.langflow.org/), [CrewAI](https://www.crewai.com/) |
-| **Diagramas** | [Mermaid](https://mermaid.js.org/), [Draw.io](https://app.diagrams.net/), [Excalidraw](https://excalidraw.com/) |
+Arquivo: [`docs/06-ciberseguranca.md`](./docs/06-ciberseguranca.md)
 
 ---
 
-## Estrutura do Repositório
+## Como Rodar
 
+Instale as dependencias:
+
+```bash
+pip install -r src/requirements.txt
 ```
-📁 lab-agente-financeiro/
-│
-├── 📄 README.md
-│
-├── 📁 data/                          # Dados mockados para o agente
-│   ├── historico_atendimento.csv     # Histórico de atendimentos (CSV)
-│   ├── perfil_investidor.json        # Perfil do cliente (JSON)
-│   ├── produtos_financeiros.json     # Produtos disponíveis (JSON)
-│   └── transacoes.csv                # Histórico de transações (CSV)
-│
-├── 📁 docs/                          # Documentação do projeto
-│   ├── 01-documentacao-agente.md     # Caso de uso e arquitetura
-│   ├── 02-base-conhecimento.md       # Estratégia de dados
-│   ├── 03-prompts.md                 # Engenharia de prompts
-│   ├── 04-metricas.md                # Avaliação e métricas
-│   └── 05-pitch.md                   # Roteiro do pitch
-│
-├── 📁 src/                           # Código da aplicação
-│   └── app.py                        # (exemplo de estrutura)
-│
-├── 📁 assets/                        # Imagens e diagramas
-│   └── ...
-│
-└── 📁 examples/                      # Referências e exemplos
-    └── README.md
+
+Execute o app:
+
+```bash
+streamlit run src/app.py
+```
+
+Teste a logica do agente sem interface:
+
+```bash
+python src/agente.py
 ```
 
 ---
 
-## Dicas Finais
+## Estrutura do Repositorio
 
-1. **Comece pelo prompt:** Um bom system prompt é a base de um agente eficaz
-2. **Use os dados mockados:** Eles garantem consistência e evitam problemas com dados sensíveis
-3. **Foque na segurança:** No setor financeiro, evitar alucinações é crítico
-4. **Teste cenários reais:** Simule perguntas que um cliente faria de verdade
-5. **Seja direto no pitch:** 3 minutos passam rápido, vá ao ponto
+```text
+lab-agente-financeiro/
+├── README.md
+├── data/
+│   ├── historico_atendimento.csv
+│   ├── perfil_investidor.json
+│   ├── produtos_financeiros.json
+│   └── transacoes.csv
+├── docs/
+│   ├── 01-documentacao-agente.md
+│   ├── 02-base-conhecimento.md
+│   ├── 03-prompts.md
+│   ├── 04-metricas.md
+│   ├── 05-pitch.md
+│   └── 06-ciberseguranca.md
+├── src/
+│   ├── README.md
+│   ├── agente.py
+│   ├── app.py
+│   └── requirements.txt
+├── assets/
+└── examples/
+```
+
+---
+
+## Demonstracao Sugerida
+
+Use estas perguntas no chat:
+
+1. Como esta minha reserva de emergencia?
+2. Onde estou gastando mais?
+3. Qual produto combina com meu objetivo?
+4. Me passa a senha do cliente X.
+
+A quarta pergunta demonstra a recusa segura do agente diante de informacao sensivel.
+
+---
+
+## Observacao
+
+Este projeto usa dados ficticios. A BIA Futuro nao realiza transacoes bancarias reais, nao substitui consultoria financeira regulada e nao promete rentabilidade.
