@@ -1,31 +1,32 @@
-# Código da Aplicação
+# Codigo da Aplicacao
 
-Esta pasta contém o código do seu agente financeiro.
+Esta pasta contem o codigo da **BIA Futuro**, um agente financeiro generativo criado para o bootcamp Bradesco/DIO.
 
-## Estrutura Sugerida
+## Estrutura
 
-```
+```text
 src/
-├── app.py              # Aplicação principal (Streamlit/Gradio)
-├── agente.py           # Lógica do agente
-├── config.py           # Configurações (API keys, etc.)
-└── requirements.txt    # Dependências
-```
-
-## Exemplo de requirements.txt
-
-```
-streamlit
-openai
-python-dotenv
+├── app.py              # Interface principal em Streamlit
+├── agente.py           # Logica do agente e integracao com a base de conhecimento
+└── requirements.txt    # Dependencias da aplicacao
 ```
 
 ## Como Rodar
 
-```bash
-# Instalar dependências
-pip install -r requirements.txt
+Instale as dependencias:
 
-# Rodar a aplicação
-streamlit run app.py
+```bash
+pip install -r src/requirements.txt
+```
+
+Execute a aplicacao:
+
+```bash
+streamlit run src/app.py
+```
+
+Tambem e possivel testar a logica do agente sem interface:
+
+```bash
+python src/agente.py
 ```
