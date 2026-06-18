@@ -44,7 +44,7 @@ Joao, sua reserva esta em R$ 10.000,00 de uma meta de R$ 15.000,00. Isso represe
 
 ### Cenario 2: Analise de Gastos
 
-**Contexto:** As transacoes de outubro mostram gastos em moradia, alimentacao, saude, lazer e transporte.
+**Contexto:** As transacoes de Junho mostram gastos em moradia, alimentacao, saude, lazer e transporte.
 
 **Usuario:**
 
@@ -55,7 +55,7 @@ Onde estou gastando mais?
 **Agente:**
 
 ```text
-Pelos dados de outubro, sua maior categoria de saida e moradia, com R$ 1.380,00, seguida por alimentacao, com R$ 570,00, e transporte, com R$ 295,00. Um bom proximo passo e revisar despesas variaveis, como alimentacao fora de casa e transporte, antes de mexer em custos essenciais.
+Pelos dados de Junho, sua maior categoria de saida e moradia, com R$ 1.380,00, seguida por alimentacao, com R$ 570,00, e transporte, com R$ 295,00. Um bom proximo passo e revisar despesas variaveis, como alimentacao fora de casa e transporte, antes de mexer em custos essenciais.
 ```
 
 ---
