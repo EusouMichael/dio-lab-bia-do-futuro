@@ -30,3 +30,7 @@ Tambem e possivel testar a logica do agente sem interface:
 ```bash
 python src/agente.py
 ```
+<img width="1233" height="772" alt="Captura de tela " src="https://github.com/user-attachments/assets/c6be51e8-3077-4446-aa4e-0d273fd639c6" />
+
+
+
